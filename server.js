@@ -20,10 +20,15 @@ const db = require("./config/keys").mongoURI;
 mongoose
   .connect(db, {
     useNewUrlParser: true,
-    useUnifiedTopology: true
+    useUnifiedTopology: true,
+    useFindAndModify: false
   })
   .then(() => "MonoDB Connected")
   .catch(err => console.log(err));
+
+//Passport wahala
+passport.serializeUser((user, done) => done(null, user));
+passport.deserializeUser((user, done) => done(null, user));
 
 // Passport middleware
 app.use(passport.initialize());
