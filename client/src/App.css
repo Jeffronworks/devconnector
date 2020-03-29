@@ -12,6 +12,12 @@ img {
   margin-bottom: -50px;
 }
 
+.myt {
+  position: -ms-page;
+  bottom: 0;
+  width: 100%;
+}
+
 .landing-inner {
   padding-top: 80px;
 }
